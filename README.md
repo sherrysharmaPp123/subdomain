@@ -43,31 +43,38 @@ Also have a wordlist ready for brute-force mode (e.g. `wordlists/top-subdomains.
    https://github.com/sherrysharmaPp123/subdomain.git
 
 2. Make the script executable:
-chmod +x piyush.sh
 
-3. Ensure dependencies are installed:
-sudo apt update
-sudo apt install -y curl jq dnsutils
+   chmod +x piyush.sh
+
+4. Ensure dependencies are installed:
+
+   sudo apt update
+   sudo apt install -y curl jq dnsutils
 # Also install other tools if you plan to use them, like:
-https://github.com/tomnomnom/assetfinder@latest
-https://github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-https://github.com/owasp-amass/amass/v3/...@latest
+
+   https://github.com/tomnomnom/assetfinder@latest
+   https://github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+   https://github.com/owasp-amass/amass/v3/...@latest
 
 4. Prepare the wordlist if using brute force (put it in wordlists/top-subdomains.txt).
 
 🚀 Usage
 
 Basic usage:
-./piyu.sh -d example.com
+
+  bash piyu.sh -d example.com
 
 Enable brute-force:
-./piyu.sh -d example.com -b
+
+ bash piyu.sh -d example.com -b
 
 Enable live resolution (show only subdomains that resolve):
-./piyu.sh -d example.com -r
+ 
+ bash piyu.sh -d example.com -r
 
 Combine both:
-./piyu.sh -d example.com -b -r
+ 
+ bash piyu.sh -d example.com -b -r
 
 📁 Output
 
